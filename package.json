@@ -1,0 +1,14 @@
+{
+  "name": "effacious-capsicum",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-sass": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmbaughman/effacious-capsicum.git"
+  },
+  "author": "David Baughman"
+}
