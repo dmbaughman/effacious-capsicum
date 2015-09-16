@@ -1,0 +1,30 @@
+// --------------------------------
+// Flexbox support:
+// http://caniuse.com/#feat=flexbox
+// --------------------------------
+
+
+$sidebar-left-width: 180px;
+$sidebar-right-width: 200px;
+
+.flex-container {
+    display: flex;
+}
+
+.sidebar {
+    
+    &-left {
+        width: $sidebar-left-width;
+        background: #9f9;
+    }
+
+    &-right {
+        width: $sidebar-right-width;
+        background: #f99;
+    }
+}
+
+.content {
+    flex-grow: 1;
+    background: #99f;
+}

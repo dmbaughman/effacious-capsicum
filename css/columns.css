@@ -1,0 +1,20 @@
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.sidebar-left {
+  width: 180px;
+  background: #9f9; }
+
+.sidebar-right {
+  width: 200px;
+  background: #f99; }
+
+.content {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #99f; }
