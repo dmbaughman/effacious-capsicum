@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box; }
+
+.menu-item,
+.menu-button {
+  width: 140px;
+  padding: 5px;
+  list-style-type: none; }
+
+.menu-button {
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  background: #9f9; }
+
+.menu,
+.submenu {
+  padding: 0; }
+
+.menu {
+  display: none;
+  position: absolute;
+  margin: 0;
+  background: #ddd; }
+  .menu.active {
+    display: block; }
+  .menu > .menu-item {
+    position: relative;
+    cursor: pointer; }
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -140px;
+  background: #eee; }
+  .submenu.active {
+    display: block; }

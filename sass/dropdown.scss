@@ -1,0 +1,58 @@
+$menu-width: 140px;
+$item-padding: 5px;
+
+* {
+    box-sizing: border-box;
+}
+
+.menu-item,
+.menu-button {
+    width: $menu-width;
+    padding: $item-padding;
+    list-style-type: none;
+}
+
+.menu-button {
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    background: #9f9;
+}
+
+
+.menu,
+.submenu {
+    padding: 0;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    margin: 0;
+    background: #ddd;
+
+    &.active {
+        display: block;
+    }
+
+
+    > .menu-item {
+        position: relative;
+        cursor: pointer;
+    }
+
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -$menu-width;
+    background: #eee;
+
+    &.active {
+        display: block;
+    }
+}
+
+
