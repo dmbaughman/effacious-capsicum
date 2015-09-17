@@ -2,7 +2,8 @@ var selectors = {
     menu: 'js-menu',
     menuToggle: 'js-menu-toggle',
     submenu: 'js-submenu',
-    submenuToggle: 'js-submenu-toggle'
+    submenuToggle: 'js-submenu-toggle',
+    submenuActive: '.js-submenu.active'
 };
 
 var strings = {
@@ -19,11 +20,16 @@ bindMenuToggle = function( toggler, target ) {
     });
 };
 
+hideSubmenu = function( selector ) {
+    var activeSubmenu = document.querySelector( selector );
+    if ( activeSubmenu !== null ) {
+        activeSubmenu.classList.remove( strings.active );
+    }
+};
+
 addSubmenuHandler = function( el, target ) {
     el.addEventListener( strings.hover, function() {
-        
-        // @TODO: Remove 'active' class from other submenus when changing hover target
-
+        hideSubmenu( selectors.submenuActive );
         target.classList.add( strings.active );
     });
 };
@@ -31,12 +37,8 @@ addSubmenuHandler = function( el, target ) {
 bindSubmenuToggle = function( toggler ) {
     var submenuToggle = document.getElementsByClassName( toggler );
 
-    console.log(submenuToggle.length);
-
     for (var i = 0; i < submenuToggle.length; i++) {
         var submenu = submenuToggle[i].children[0];
-        console.log('derp');
-        
         addSubmenuHandler( submenuToggle[i], submenu );
     }
 };
